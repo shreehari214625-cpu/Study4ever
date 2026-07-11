@@ -98,8 +98,16 @@ userStatus.textContent = "🟢 Online";
         state: "offline",
         lastChanged: serverTimestamp()
     });
+  startChat();
 
 });
+function startChat() {
+
+    // Agle part me pura receive message,
+    // seen, reply, reaction aur listeners
+    // isi function ke andar shift karenge.
+
+}
 
 /* SEND MESSAGE */
 sendBtn.addEventListener("click", () => {
