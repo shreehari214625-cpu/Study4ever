@@ -137,15 +137,9 @@ sendBtn.addEventListener("click", () => {
 
 })
 .then(() => {
-
-    alert("Message saved to Firebase");
-
     messageInput.value = "";
-
     replyingTo = null;
-
     replyBox.style.display = "none";
-
 })
 .catch((err) => {
 
