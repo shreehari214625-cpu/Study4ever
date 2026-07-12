@@ -51,11 +51,7 @@ const typingStatus = document.getElementById("typingStatus");
 
 const typingRef = ref(db, "typing/" + roomId);
 
-// =========================
-// Notification Permission
-if ("Notification" in window) {
-    Notification.requestPermission();
-}
+
 // Firebase References
 // =========================
 
@@ -174,15 +170,7 @@ onChildAdded(messagesRef, (snapshot) => {
         seen: true
     });
 }
-if (
-    currentUser &&
-    data.sender !== currentUser.email &&
-    Notification.permission === "granted"
-) {
-    new Notification(data.sender, {
-        body: data.text
-    });
-}
+
 const div = document.createElement("div");
 
 div.dataset.key = snapshot.key;
